@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists - </title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://kit.fontawesome.com/9d9456d370.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../images/logos/logo.png" alt="Sasta Music Logo">
+            </div>
+            <div class="browse">
+                <div class="section-header">BROWSE MUSIC</div>
+                <div class="nav-item" onclick="window.location.href='index.html'">
+                    <i class="fa-solid fa-compass"></i>
+                    <span>Discover</span>
+                </div>
+                <div class="nav-item active" onclick="window.location.href='artist.html'">
+                    <i class="fa-solid fa-user-music"></i>
+                    <span>Artists</span>
+                </div>
+                <div class="nav-item" onclick="window.location.href='album.html'">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <span>Albums</span>
+                </div>
+                <div class="nav-item" onclick="window.location.href='radio.html'">
+                    <i class="fa-solid fa-radio"></i>
+                    <span>Stations</span>
+                </div>
+            </div>
+            <div class="your">
+                <div class="section-header">YOUR MUSIC</div>
+                <div class="nav-item" onclick="window.location.href='download.html'">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Downloads</span>
+                </div>
+                <div class="nav-item" onclick="window.location.href='purchased.html'">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span>Purchased</span>
+                </div>
+                <div class="nav-item" onclick="fav()">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Favourites</span>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="search-bar">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for artists...">
+                </div>
+            </div>
+            <div class="page-header">
+                <h1>Trending Artists</h1>
+                <div class="view-options">
+                    <button class="view-btn active"><i class="fa-solid fa-grip"></i></button>
+                    <button class="view-btn"><i class="fa-solid fa-list"></i></button>
+                </div>
+            </div>
+
+            <div class="artists-grid">
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio2.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-1.jpg" alt="Leo Myers">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Leo Myers</span>
+                        <span class="song-artist">Pop Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio3.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-2.jpg" alt="Amelia Ray">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Amelia Ray</span>
+                        <span class="song-artist">Electronic Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio4.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-3.jpg" alt="Jade Blakely">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Jade Blakely</span>
+                        <span class="song-artist">R&B Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio5.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-4.jpg" alt="Caleb Stone">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Caleb Stone</span>
+                        <span class="song-artist">Rock Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio6.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-5.jpg" alt="Harmony Vibe">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Harmony Vibe</span>
+                        <span class="song-artist">Soul Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio7.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-6.jpg" alt="Tristan & The Blackbirds">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Tristan & The Blackbirds</span>
+                        <span class="song-artist">Indie Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio8.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-7.jpg" alt="Elise Phoenix">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Elise Phoenix</span>
+                        <span class="song-artist">Acoustic Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio9.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-8.jpg" alt="Jay Walker">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Jay Walker</span>
+                        <span class="song-artist">Hip Hop Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio10.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-9.jpg" alt="The Dreamers">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">The Dreamers</span>
+                        <span class="song-artist">Pop Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio11.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-10.jpg" alt="Ava & The Stars">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Ava & The Stars</span>
+                        <span class="song-artist">Pop Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio12.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-11.jpg" alt="The Lumina Band">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">The Lumina Band</span>
+                        <span class="song-artist">Folk Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="trending-artists" data-audio="../audio/audio13.mp3">
+                    <div class="song-image">
+                        <img src="../images/artists/artist-12.jpg" alt="Zenith Collective">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Zenith Collective</span>
+                        <span class="song-artist">Jazz Artist</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="player-bar"
+                    style="background-color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 10px 28px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); font-family: 'Segoe UI', sans-serif; border-radius: 10px; max-width: 1200px; margin: 20px auto; height: 64px;">
+
+                    <!-- Player Controls -->
+                    <div class="player-controls" style="display: flex; gap: 16px; align-items: center;">
+                        <button id="prev-btn"
+                            style="background: none; border: none; font-size: 20px; color: #333; cursor: pointer;"><i
+                                class="fa-solid fa-backward-step"></i></button>
+                        <button id="play-pause-btn"
+                            style="background: #1db954; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 16px; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center;"><i
+                                class="fa-solid fa-play"></i></button>
+                        <button id="next-btn"
+                            style="background: none; border: none; font-size: 20px; color: #333; cursor: pointer;"><i
+                                class="fa-solid fa-forward-step"></i></button>
+                    </div>
+
+                    <!-- Song Info -->
+                    <div class="player-info" style="display: flex; align-items: center; gap: 12px; max-width: 45%;">
+                        <img id="current-song-image" src="../images/songs/song1.jpg" alt="Current Song Cover"
+                            style="width: 48px; height: 48px; object-fit: cover; border-radius: 6px;">
+                        <div class="song-details" style="display: flex; flex-direction: column; overflow: hidden;">
+                            <span id="current-song-title" class="title"
+                                style="font-weight: 600; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Sunset
+                                Groove</span>
+                            <span id="current-song-artist" class="artist"
+                                style="font-size: 12px; color: #666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Leo
+                                Myers & The Vibe Crew</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="progress-bar-container"
+                        style="display: flex; align-items: center; gap: 8px; width: 32%;">
+                        <span id="current-time" style="font-size: 12px; color: #555;">0:00</span>
+                        <input type="range" id="progress-bar" value="0"
+                            style="flex-grow: 1; appearance: none; height: 4px; background: #ccc; border-radius: 2px; outline: none; cursor: pointer;">
+                        <span id="duration" style="font-size: 12px; color: #555;">0:00</span>
+                    </div>
+
+                    <audio id="audio-player"></audio>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/player.js"></script>
+</body>
+
+</html>

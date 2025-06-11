@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stations - </title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://kit.fontawesome.com/9d9456d370.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../images/logos/logo.png" alt="Sasta Music Logo">
+            </div>
+            <div class="browse">
+                <div class="section-header">BROWSE MUSIC</div>
+                <div class="nav-item" onclick="window.location.href='index.html'">
+                    <i class="fa-solid fa-compass"></i>
+                    <span>Discover</span>
+                </div>
+                <div class="nav-item" onclick="window.location.href='artist.html'">
+                    <i class="fa-solid fa-user-music"></i>
+                    <span>Artists</span>
+                </div>
+                <div class="nav-item" onclick="window.location.href='album.html'">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <span>Albums</span>
+                </div>
+                <div class="nav-item active" onclick="window.location.href='radio.html'">
+                    <i class="fa-solid fa-radio"></i>
+                    <span>Stations</span>
+                </div>
+            </div>
+            <div class="your">
+                <div class="section-header">YOUR MUSIC</div>
+                <div class="nav-item" onclick="window.location.href='download.html'">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Downloads</span>
+                </div>
+                <div class="nav-item" onclick="window.location.href='purchased.html'">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span>Purchased</span>
+                </div>
+                <div class="nav-item" onclick="fav()">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Favourites</span>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="search-bar">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for stations...">
+                </div>
+            </div>
+            <div class="page-header">
+                <h1>Stations</h1>
+                <div class="view-options">
+                    <button class="view-btn active"><i class="fa-solid fa-grip"></i></button>
+                    <button class="view-btn"><i class="fa-solid fa-list"></i></button>
+                </div>
+            </div>
+            
+            <div class="stations-grid">
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio2.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-1.jpg" alt="Station 1">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station One</span>
+                        <span class="song-artist">Genre 1</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio3.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-2.jpg" alt="Station 2">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Two</span>
+                        <span class="song-artist">Genre 2</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio4.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-3.jpg" alt="Station 3">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Three</span>
+                        <span class="song-artist">Genre 3</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio5.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-4.jpg" alt="Station 4">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Four</span>
+                        <span class="song-artist">Genre 4</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio6.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-5.jpg" alt="Station 5">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Five</span>
+                        <span class="song-artist">Genre 5</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio7.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-6.jpg" alt="Station 6">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Six</span>
+                        <span class="song-artist">Genre 6</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio8.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-7.jpg" alt="Station 7">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Seven</span>
+                        <span class="song-artist">Genre 7</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio9.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-8.jpg" alt="Station 8">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Eight</span>
+                        <span class="song-artist">Genre 8</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio10.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-9.jpg" alt="Station 9">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Nine</span>
+                        <span class="song-artist">Genre 9</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio2.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-10.jpg" alt="Station 10">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Ten</span>
+                        <span class="song-artist">Genre 10</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio3.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-11.jpg" alt="Station 11">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Eleven</span>
+                        <span class="song-artist">Genre 11</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="song-card" data-category="top-stations" data-audio="../audio/audio4.mp3">
+                    <div class="song-image">
+                        <img src="../images/radio/radio-12.jpg" alt="Station 12">
+                    </div>
+                    <div class="song-details">
+                        <span class="song-title">Station Twelve</span>
+                        <span class="song-artist">Genre 12</span>
+                    </div>
+                    <div class="song-actions">
+                        <button class="action-btn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </div>
+                <div class="player-bar" style="background-color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 10px 28px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); font-family: 'Segoe UI', sans-serif; border-radius: 10px; max-width: 1200px; margin: 20px auto; height: 64px;">
+    
+    <!-- Player Controls -->
+    <div class="player-controls" style="display: flex; gap: 16px; align-items: center;">
+        <button id="prev-btn" style="background: none; border: none; font-size: 20px; color: #333; cursor: pointer;"><i class="fa-solid fa-backward-step"></i></button>
+        <button id="play-pause-btn" style="background: #1db954; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 16px; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-play"></i></button>
+        <button id="next-btn" style="background: none; border: none; font-size: 20px; color: #333; cursor: pointer;"><i class="fa-solid fa-forward-step"></i></button>
+    </div>
+
+    <!-- Song Info -->
+    <div class="player-info" style="display: flex; align-items: center; gap: 12px; max-width: 45%;">
+        <img id="current-song-image" src="../images/songs/song1.jpg" alt="Current Song Cover" style="width: 48px; height: 48px; object-fit: cover; border-radius: 6px;">
+        <div class="song-details" style="display: flex; flex-direction: column; overflow: hidden;">
+            <span id="current-song-title" class="title" style="font-weight: 600; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Sunset Groove</span>
+            <span id="current-song-artist" class="artist" style="font-size: 12px; color: #666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Leo Myers & The Vibe Crew</span>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar-container" style="display: flex; align-items: center; gap: 8px; width: 32%;">
+        <span id="current-time" style="font-size: 12px; color: #555;">0:00</span>
+        <input type="range" id="progress-bar" value="0" style="flex-grow: 1; appearance: none; height: 4px; background: #ccc; border-radius: 2px; outline: none; cursor: pointer;">
+        <span id="duration" style="font-size: 12px; color: #555;">0:00</span>
+    </div>
+
+    <audio id="audio-player"></audio>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/player.js"></script>
+</body>
+</html>

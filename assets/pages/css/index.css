@@ -1,0 +1,267 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Main container styling */
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Sidebar - Navigation styling */
+.b1 {
+    width: 250px;
+    padding: 20px;
+    background-color: #232323;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.b1 .logo img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.b1 .browse, .b1 .your {
+    margin-bottom: 30px;
+}
+
+#hed {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+.b1 div[id] {
+    color: #bdbdbd;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.b1 div[id]:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.b2 {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search Bar */
+.serch {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.serch input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.serch button {
+    background-color: #ff5722;
+    border: none;
+    padding: 8px;
+    margin-left: 5px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.serch button:hover {
+    background-color: #e64a19;
+}
+
+.bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.bar button {
+    background-color: #00796b;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bar button:hover {
+    background-color: #004d40;
+}
+
+/* Box Styling for Music Items */
+/* Add transition effect on song box hover */
+.box1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.9); /* Slightly smaller to add zoom effect */
+}
+
+.box1.show {
+    animation: showAnimation 0.5s forwards;
+}
+
+@keyframes showAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.box1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.box1 .info {
+    padding: 10px;
+    background-color: #ffeb3b;
+    border-radius: 10px 0 0 10px;
+    font-size: 14px;
+    color: #232323;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1 .num {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f44336;
+    margin-right: 20px;
+}
+
+.box1 .img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.box1 .deta {
+    margin-left: 10px;
+    width: 35%;
+    color: #333;
+}
+
+.box1 .others {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.box1 .others i {
+    color: #888;
+    cursor: pointer;
+}
+
+.box1 .others span {
+    margin: 0 5px;
+}
+
+/* Music Player Queue Section */
+.bbx {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bbx .bb1 {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.bbx .bb1 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.bbx .bb1 .haha span {
+    color: #333;
+}
+
+/* Fix for .bb2 to make sure it is visible */
+.bbx .bb2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bbx .bb2 audio {
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+}
+
+.bbx .que {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00796b;
+    font-weight: bold;
+}
+
+/* Hover Effects */
+button:hover {
+    background-color: #00796b;
+}
+
+img:hover {
+    opacity: 0.8;
+}
