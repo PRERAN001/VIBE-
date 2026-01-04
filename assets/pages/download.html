@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasta Music | Downloads</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9d9456d370.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-gradient"></div>
+                <h1>Sasta</h1>
+            </div>
+            <nav class="nav-section">
+                <p class="nav-label">Browse Music</p>
+                <div class="nav-item" onclick="window.location.href='index.html'"><i class="fa-solid fa-compass"></i> <span>Discover</span></div>
+                <div class="nav-item" onclick="window.location.href='artist.html'"><i class="fa-solid fa-user-music"></i> <span>Artists</span></div>
+                <div class="nav-item" onclick="window.location.href='album.html'"><i class="fa-solid fa-compact-disc"></i> <span>Albums</span></div>
+                <div class="nav-item" onclick="window.location.href='radio.html'"><i class="fa-solid fa-radio"></i> <span>Stations</span></div>
+            </nav>
+            <nav class="nav-section">
+                <p class="nav-label">Your Music</p>
+                <div class="nav-item active"><i class="fa-solid fa-download"></i> <span>Downloads</span></div>
+                <div class="nav-item" onclick="window.location.href='purchased.html'"><i class="fa-solid fa-shopping-bag"></i> <span>Purchased</span></div>
+                <div class="nav-item"><i class="fa-solid fa-heart"></i> <span>Favourites</span></div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search offline tracks...">
+                </div>
+                <div class="user-controls">
+                    <div class="notification"><i class="fa-regular fa-bell"></i></div>
+                    <div class="profile-frame"><img src="https://i.pravatar.cc/150?u=download" alt="Profile"></div>
+                </div>
+            </header>
+
+            <div class="page-title-box">
+                <div class="title-left">
+                    <span class="badge offline-badge"><i class="fa-solid fa-circle-check"></i> Available Offline</span>
+                    <h1>Downloads</h1>
+                    <p>Listen to your music anytime, anywhere.</p>
+                </div>
+                <div class="storage-info-card">
+                    <div class="storage-text">
+                        <span>Used Space</span>
+                        <span>1.2 GB / 5.0 GB</span>
+                    </div>
+                    <div class="storage-bar"><div class="fill" style="width: 24%;"></div></div>
+                </div>
+            </div>
+
+            <div class="songs-table">
+                <div class="table-header">
+                    <span>#</span>
+                    <span>Song</span>
+                    <span>Album</span>
+                    <span><i class="fa-regular fa-clock"></i></span>
+                    <span class="text-right">Manage</span>
+                </div>
+
+                <div class="songs-container">
+                    <div class="song-row" data-audio="../audio/audio2.mp3">
+                        <div class="s-num">01</div>
+                        <div class="s-main">
+                            <div class="s-img"><i class="fa-solid fa-music"></i></div>
+                            <div class="s-info">
+                                <h5>Bloodlust</h5>
+                                <p>Dream Your Moments</p>
+                            </div>
+                        </div>
+                        <div class="s-album">Hollow Souls</div>
+                        <div class="s-time">5:26</div>
+                        <div class="s-actions">
+                            <button class="icon-btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="icon-btn remove-btn"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </main>
+
+        <footer class="player-capsule">
+            <div class="player-track-info">
+                <img src="../images/songs/song1.jpg" class="rotating-art">
+                <div class="text">
+                    <h5>Bloodlust</h5>
+                    <p>Dream Your Moments</p>
+                </div>
+            </div>
+
+            <div class="player-main-controls">
+                <div class="playback-btns">
+                    <i class="fa-solid fa-backward-step"></i>
+                    <div class="master-play"><i class="fa-solid fa-play"></i></div>
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+                <div class="progress-wrapper">
+                    <span class="time">1:20</span>
+                    <div class="progress-bar-bg"><div class="progress-fill"></div></div>
+                    <span class="time">5:26</span>
+                </div>
+            </div>
+
+            <div class="player-side-controls">
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="vol-bar-bg"><div class="vol-fill"></div></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

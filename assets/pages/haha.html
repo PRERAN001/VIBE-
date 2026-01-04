@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Reveal Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9d9456d370.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: #0a0b10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: white;
+            gap: 30px;
+        }
+
+        /* Extraordinary Animation Keyframes */
+        @keyframes reveal {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+                filter: blur(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        /* Button Styling */
+        #triggerBtn {
+            padding: 12px 24px;
+            background: var(--primary);
+            border: none;
+            border-radius: 50px;
+            color: black;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+            transition: 0.3s ease;
+        }
+
+        #triggerBtn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.5);
+        }
+
+        /* Song Card Styling */
+        .song-card {
+            height: 70px;
+            width: 500px;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 20px;
+            opacity: 0; /* Hidden by default */
+        }
+
+        .song-card.animate {
+            animation: reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .num { opacity: 0.5; font-weight: 700; }
+        
+        .img {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            background: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .deta { flex: 1; display: flex; flex-direction: column; }
+        .deta span:first-child { font-weight: 700; font-size: 15px; }
+        .deta span:last-child { font-size: 12px; color: rgba(255,255,255,0.5); }
+
+        .others { display: flex; align-items: center; gap: 15px; color: rgba(255,255,255,0.7); }
+        .others i:hover { color: var(--primary); cursor: pointer; }
+
+    </style>
+</head>
+<body>
+
+    <button id="triggerBtn">Refresh Trending</button>
+
+    <div class="song-card">
+        <div class="num">01</div>
+        <div class="img">
+            <img src="https://via.placeholder.com/45" alt="">
+        </div>
+        <div class="deta">
+            <span>Walking Princes</span>
+            <span>Harry Jackson</span>
+        </div>
+        <div class="others">
+            <i class="fa-regular fa-heart"></i>
+            <span>04:23</span>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+    </div>
+
+    <script>
+        const trigger = document.querySelector("#triggerBtn");
+        const card = document.querySelector(".song-card");
+
+        trigger.addEventListener("click", () => {
+            card.classList.remove("animate");
+            void card.offsetWidth; // Force Reflow
+            card.classList.add("animate");
+        });
+    </script>
+
+</body>
+</html>

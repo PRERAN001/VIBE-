@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasta Music | Purchased</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9d9456d370.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css"> </head>
+<body>
+    <div class="bg-glow"></div>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-gradient"></div>
+                <h1>Sasta</h1>
+            </div>
+            <nav class="nav-section">
+                <p class="nav-label">Browse Music</p>
+                <div class="nav-item" onclick="window.location.href='index.html'"><i class="fa-solid fa-compass"></i> <span>Discover</span></div>
+                <div class="nav-item" onclick="window.location.href='artist.html'"><i class="fa-solid fa-user-music"></i> <span>Artists</span></div>
+                <div class="nav-item" onclick="window.location.href='album.html'"><i class="fa-solid fa-compact-disc"></i> <span>Albums</span></div>
+            </nav>
+            <nav class="nav-section">
+                <p class="nav-label">Your Music</p>
+                <div class="nav-item" onclick="window.location.href='download.html'"><i class="fa-solid fa-download"></i> <span>Downloads</span></div>
+                <div class="nav-item active"><i class="fa-solid fa-shopping-bag"></i> <span>Purchased</span></div>
+                <div class="nav-item"><i class="fa-solid fa-heart"></i> <span>Favourites</span></div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search purchased items...">
+                </div>
+                <div class="user-controls">
+                    <div class="notification"><i class="fa-regular fa-bell"></i></div>
+                    <div class="profile-frame"><img src="https://i.pravatar.cc/150?u=purchased" alt="Profile"></div>
+                </div>
+            </header>
+
+            <div class="page-title-box">
+                <div class="title-left">
+                    <span class="badge">Collection</span>
+                    <h1>Purchased Library</h1>
+                    <p>You own 48 tracks in high fidelity.</p>
+                </div>
+                <div class="view-toggle">
+                    <button class="toggle-btn active"><i class="fa-solid fa-list"></i></button>
+                    <button class="toggle-btn"><i class="fa-solid fa-grip"></i></button>
+                </div>
+            </div>
+
+            <div class="songs-table">
+                <div class="table-header">
+                    <span>#</span>
+                    <span>Title</span>
+                    <span>Album</span>
+                    <span><i class="fa-regular fa-clock"></i></span>
+                    <span class="text-right">Actions</span>
+                </div>
+
+                <div class="songs-container">
+                    <div class="song-row" data-audio="../audio/audio2.mp3">
+                        <div class="s-num">01</div>
+                        <div class="s-main">
+                            <div class="s-img"><i class="fa-solid fa-music"></i></div>
+                            <div class="s-info">
+                                <h5>Bloodlust</h5>
+                                <p>Dream Your Moments</p>
+                            </div>
+                        </div>
+                        <div class="s-album">Midnight Echoes</div>
+                        <div class="s-time">5:26</div>
+                        <div class="s-actions">
+                            <button class="icon-btn glow-heart"><i class="fa-solid fa-heart"></i></button>
+                            <button class="icon-btn"><i class="fa-solid fa-download"></i></button>
+                            <button class="icon-btn remove-btn"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="song-row" data-audio="../audio/audio3.mp3">
+                        <div class="s-num">02</div>
+                        <div class="s-main">
+                            <div class="s-img active-play"><i class="fa-solid fa-play"></i></div>
+                            <div class="s-info">
+                                <h5>Neon Horizon</h5>
+                                <p>Cyberwave Collective</p>
+                            </div>
+                        </div>
+                        <div class="s-album">Digital Dreams</div>
+                        <div class="s-time">4:12</div>
+                        <div class="s-actions">
+                            <button class="icon-btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="icon-btn"><i class="fa-solid fa-download"></i></button>
+                            <button class="icon-btn remove-btn"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="player-capsule">
+            <div class="player-track-info">
+                <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=100" class="rotating-art">
+                <div class="text">
+                    <h5>Bloodlust</h5>
+                    <p>Dream Your Moments</p>
+                </div>
+            </div>
+            <div class="player-main-controls">
+                <div class="playback-btns">
+                    <i class="fa-solid fa-backward-step"></i>
+                    <div class="master-play"><i class="fa-solid fa-play"></i></div>
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+                <div class="progress-wrapper">
+                    <span class="time">1:20</span>
+                    <div class="progress-bar-bg"><div class="progress-fill"></div></div>
+                    <span class="time">5:26</span>
+                </div>
+            </div>
+            <div class="player-side-controls">
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="vol-bar-bg"><div class="vol-fill"></div></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
